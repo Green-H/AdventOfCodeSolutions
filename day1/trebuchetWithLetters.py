@@ -5,7 +5,7 @@ Created on Thu Dec 14 10:50:14 2023
 @author: Luca
 """
 
-PATH = "day1\calibration.txt"
+PATH = "day1/calibration.txt"
 d = {'one': "1",
      'two': "2",
      'three': "3",
