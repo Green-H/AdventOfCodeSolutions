@@ -6,10 +6,10 @@ MAXROW = 140
 MAXCOLUMN = 140
 def sumEngineParts():
     with open(PATH,"r") as file:
+        data = file.readlines()
         num = ""
         tot = 0
         number_found = False
-        data = file.readlines()
         for i in range(MAXROW):
             for j in range(MAXCOLUMN):
                 print("provo a scegliere l'elemento in posizione:",i,j)
@@ -41,8 +41,11 @@ def sumEngineParts():
                     print("[i,j]=",i,j,"num=",num,"\n","Check left: ",left_side,"Check right: ",right_side,"Check up: ",top_row,"Check down: ",bot_row)
                     # se è adiacete ad un simbolo il numero è valido e lo aggiungo al totale, resettandolo
                     if right_side in SYMBOLS or left_side in SYMBOLS or any(char in top_row for char in SYMBOLS) or any(char in bot_row for char in SYMBOLS):
+                        print("il totale finora e",tot)
                         tot += int(num)
                         print("============> numero rilevato dopo  un simbolo:",num)
+                        print("il totale provvisorio dopo aver aggiunto",num,"equivale a",tot)
+                        
                     else:
                         print("numero non valido")
                     num = ""
