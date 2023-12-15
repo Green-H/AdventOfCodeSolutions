@@ -12,7 +12,7 @@ def sumEngineParts():
         data = file.readlines()
         for i in range(MAXROW):
             for j in range(MAXCOLUMN):
-                print("l'elemento in posizione",i,j)
+                print("provo a scegliere l'elemento in posizione:",i,j)
                 current_element = data[i][j]
                 print("leggo: ",current_element)
                 if current_element in NUMBERS: # è un numero? se si mettilo in num
@@ -25,7 +25,6 @@ def sumEngineParts():
                     if i == 0:
                         top_row = ""
                     else:
-                        print("creo la riga sotto di me, sono alla riga i=",i)
                         top_row = data[i-1][max(0,j-len(num)-1):j+1]
                     if i == MAXROW-1:
                         bot_row=""
@@ -39,11 +38,11 @@ def sumEngineParts():
                         left_side = ""
                     else:
                         left_side = data[i][j-len(num)-1]
-                    print("[i,j]=",i,j,"\n","Check left: ",left_side,"Check right: ",right_side,"Check up: ",top_row,"Check down: ",bot_row)
+                    print("[i,j]=",i,j,"num=",num,"\n","Check left: ",left_side,"Check right: ",right_side,"Check up: ",top_row,"Check down: ",bot_row)
                     # se è adiacete ad un simbolo il numero è valido e lo aggiungo al totale, resettandolo
                     if right_side in SYMBOLS or left_side in SYMBOLS or any(char in top_row for char in SYMBOLS) or any(char in bot_row for char in SYMBOLS):
                         tot += int(num)
-                        print("numero rilevato dopo  un simbolo:",num)
+                        print("============> numero rilevato dopo  un simbolo:",num)
                     else:
                         print("numero non valido")
                     num = ""
