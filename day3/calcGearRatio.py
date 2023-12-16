@@ -10,7 +10,7 @@ def calcGearRatio():
             for j in range(MAXCOLUMN-1):
                 current_element = data[i][j]
                 if current_element == "*":
-                     
+                    pass     # se leggi un asterisco devi leggere cosa??
 
 
 calcGearRatio()
