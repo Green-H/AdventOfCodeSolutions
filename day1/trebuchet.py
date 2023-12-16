@@ -1,4 +1,4 @@
-PATH = "day1/calibration.txt"
+PATH = "input/day1/calibration.txt"
 
 def recalibrate():
     output = 0

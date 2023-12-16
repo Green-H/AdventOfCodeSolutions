@@ -1,5 +1,5 @@
 # 141 caratteri per riga
-PATH = "day3/schematics.txt"
+PATH = "input/day3/schematics.txt"
 SYMBOLS = "=&+-@*%#/$"
 NUMBERS = "0123456789"
 MAXROW = 140

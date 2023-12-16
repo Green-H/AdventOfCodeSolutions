@@ -1,4 +1,4 @@
-PATH = "day2/games.txt"
+PATH = "input/day2/games.txt"
 def minimumPossibleGames():
     tot = 0
     with open(PATH,"r")as file:
